@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+	{% block content %}
+	  <select>
+		  	{% for hotel in hotels %}
+		    <option value = '{{hotel.name}}'>{{hotel.name}} </option>
+		  {% endfor %}
+	  </select>
+	 
+	<select>
+	  {% for restaurant in restaurants %}
+	    <option value = '{{restuarant.name}}'>{{restaurant.name}}</option>
+	  {% endfor %}
+	</select>
+
+	<select>
+	  {% for activity in activity %}
+	    <option value '{{activity.name}}'>{{activity.name}} </option>
+	  {% endfor %}
+	</select>
+	
+	{% endblock %}
+	<!-- <script src ="/bootstrap.min.js"></script> -->
