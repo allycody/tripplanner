@@ -1,23 +1,36 @@
 {% extends "layout.html" %}
 
 	{% block content %}
-	  <select>
-		  	{% for hotel in hotels %}
-		    <option value = '{{hotel.name}}'>{{hotel.name}} </option>
-		  {% endfor %}
-	  </select>
-	 
-	<select>
+
+<div class="form-group select-box col-lg-12 col-md-12 col-sm-4 col-xs-12">
+	<label for="hotel"><h4>HOTELS</h4></label>
+  <select class="form-control" id="hotel-select">
+	  {% for hotel in hotels %}
+	    <option value = '{{hotel.name}}'>{{hotel.name}} </option>
+	  {% endfor %}
+  </select>
+	<i class ="glyphicon glyphicon-plus-sign"></i>
+</div>
+
+<div class="form-group select-box col-lg-12 col-md-12 col-sm-4 col-xs-12">
+	<label for="rest"><h4>RESTAURANTS</h4></label>
+	<select class="form-control" id="rest-select">
 	  {% for restaurant in restaurants %}
 	    <option value = '{{restuarant.name}}'>{{restaurant.name}}</option>
 	  {% endfor %}
 	</select>
+	<i class ="glyphicon glyphicon-plus-sign"></i>
+</div>
 
-	<select>
+<div class="form-group select-box col-lg-12 col-md-12 col-sm-4 col-xs-12">
+	<label for="act"><h4>ACTIVITIES</h4></label>
+	<select class="form-control" id="act-select">
 	  {% for activity in activity %}
 	    <option value '{{activity.name}}'>{{activity.name}} </option>
 	  {% endfor %}
 	</select>
-	
+	<i class ="glyphicon glyphicon-plus-sign"></i>
+</div>
+
 	{% endblock %}
 	<!-- <script src ="/bootstrap.min.js"></script> -->
